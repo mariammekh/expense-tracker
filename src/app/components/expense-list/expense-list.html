@@ -4,15 +4,12 @@
     <a routerLink="/add" class="btn btn-primary">+ Add New Expense</a>
   </div>
 
-  @if (expenses().length === 0) {
-    <div class="alert alert-info">No expenses found. Add some expenses to get started!</div>
-  } @else {
-    <div class="row">
-      @for (expense of expenses(); track expense.id) {
-        <div class="col-md-6 col-lg-4 mb-3">
-          <app-expense-item [expense]="expense"></app-expense-item>
-        </div>
-      }
+    <div *ngIf="expenses().length === 0" class="alert alert-info">
+      No expenses found. Add some expenses to get started!
     </div>
-  }
-</div>
+
+    <div *ngIf="expenses().length > 0" class="row">
+      <div class="col-md-6 col-lg-4 mb-3" *ngFor="let expense of expenses()">
+        <app-expense-item [expense]="expense"></app-expense-item>
+      </div>
+    </div>

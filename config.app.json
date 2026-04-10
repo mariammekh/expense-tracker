@@ -1,0 +1,12 @@
+[1mdiff --git a/tsconfig.app.json b/tsconfig.app.json[m
+[1mindex 264f459..e4dd97c 100644[m
+[1m--- a/tsconfig.app.json[m
+[1m+++ b/tsconfig.app.json[m
+[36m@@ -4,6 +4,7 @@[m
+   "extends": "./tsconfig.json",[m
+   "compilerOptions": {[m
+     "outDir": "./out-tsc/app",[m
+[32m+[m[32m    "rootDir": "./src",[m
+     "types": [][m
+   },[m
+   "include": [[m

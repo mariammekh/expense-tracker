@@ -5,7 +5,7 @@ import { ExpenseListComponent } from './components/expense-list/expense-list';
 import { EditExpenseComponent } from './components/edit-expense/edit-expense';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'add', component: AddExpenseComponent },
   { path: 'expenses', component: ExpenseListComponent },

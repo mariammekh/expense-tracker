@@ -12,6 +12,6 @@
         <button class="btn btn-sm btn-outline-danger" (click)="onDelete()">Delete</button>
       </div>
     </div>
-    <h4 class="mt-3" [ngClass]="getAmountClass()">\${{ expense.amount | number: '1.2-2' }}</h4>
+    <h4 class="mt-3" [ngClass]="getAmountClass()">$ {{ expense.amount | number: '1.2-2' }}</h4>
   </div>
 </div>
