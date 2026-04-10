@@ -1,0 +1,18 @@
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>All Expenses</h2>
+    <a routerLink="/add" class="btn btn-primary">+ Add New Expense</a>
+  </div>
+
+  @if (expenses().length === 0) {
+    <div class="alert alert-info">No expenses found. Add some expenses to get started!</div>
+  } @else {
+    <div class="row">
+      @for (expense of expenses(); track expense.id) {
+        <div class="col-md-6 col-lg-4 mb-3">
+          <app-expense-item [expense]="expense"></app-expense-item>
+        </div>
+      }
+    </div>
+  }
+</div>

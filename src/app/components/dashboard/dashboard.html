@@ -1,0 +1,46 @@
+<div class="container mt-4">
+  <div class="row mb-4">
+    <div class="col-12">
+      <div class="d-flex gap-3">
+        <a routerLink="/add" class="btn btn-primary">+ Add Expense</a>
+        <a routerLink="/expenses" class="btn btn-outline-secondary">View All Expenses</a>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="mb-4">Dashboard</h2>
+  <div class="row">
+    <div class="col-md-3 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">Total Expenses</h6>
+          <h3 class="card-title">${{ totalExpense() | number: '1.2-2' }}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">Number of Transactions</h6>
+          <h3 class="card-title">{{ transactionCount() }}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">Highest Expense</h6>
+          <h3 class="card-title">${{ highestExpense() | number: '1.2-2' }}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h6 class="card-subtitle mb-2 text-muted">Average Expense</h6>
+          <h3 class="card-title">${{ averageExpense() | number: '1.2-2' }}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
